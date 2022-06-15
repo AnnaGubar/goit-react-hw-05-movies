@@ -1,0 +1,11 @@
+.link{
+  padding: 10px;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.active-link{
+  composes:link;
+  color: red;
+}
