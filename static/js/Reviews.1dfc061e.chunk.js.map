@@ -1,1 +1,1 @@
-{"version":3,"file":"static/js/Reviews.1dfc061e.chunk.js","mappings":"iMAIA,MAJA,WACE,OAAO","sources":["Views/Reviews/Reviews.js"],"sourcesContent":["function Reviews(){\r\n  return <div>Reviews</div>\r\n}\r\n\r\nexport default Reviews;"],"names":[],"sourceRoot":""}
+{"version":3,"file":"static/js/Reviews.1dfc061e.chunk.js","mappings":"iMAIA,MAJA,WACE,OAAO","sources":["Views/Reviews/Reviews.js"],"sourcesContent":["function Reviews(){\n  return <div>Reviews</div>\n}\n\nexport default Reviews;"],"names":[],"sourceRoot":""}
