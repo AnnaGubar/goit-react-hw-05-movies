@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/MovieDetailsPage.9cf486c8.chunk.js","mappings":"iMAIA,MAJA,WACE,OAAO","sources":["Views/MovieDetailsPage/MovieDetailsPage.js"],"sourcesContent":["function MovieDetailsPage(){\r\n  return <div>MovieDetailsPage</div>\r\n}\r\n\r\nexport default MovieDetailsPage;\r\n"],"names":[],"sourceRoot":""}

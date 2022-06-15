@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/HomePage.bcf7009a.chunk.css","mappings":"AAAA,uBACE,cAAe,CACf,eACF","sources":["Views/HomePage/HomePage.module.css"],"sourcesContent":[".title{\r\n  font-size: 30px;\r\n  font-weight: 500;\r\n}"],"names":[],"sourceRoot":""}
