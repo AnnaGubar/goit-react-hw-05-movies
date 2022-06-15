@@ -5,6 +5,7 @@
   font-weight: 500;
   color: #2a363b;
   font-size: 18px;
+  transition: all 250ms ease-out;
 }
 
 .link:last-child{

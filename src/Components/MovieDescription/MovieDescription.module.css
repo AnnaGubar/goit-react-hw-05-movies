@@ -1,0 +1,19 @@
+.card{
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  max-width: 1700px;
+}
+
+li{
+ list-style: none;
+}
+
+img{
+  width: 400px;
+  height: 500px;
+}
+
+ul{
+ max-width: 900px;
+}

@@ -8,7 +8,7 @@ export async function fetchTrendingMovies() {
   return response.data;
 }
 
-// export async function fetchEventById(id) {
-//   const response = await axios.get(`events/${id}?apikey=${KEY}`);
-//   return response.data;
-// }
+export async function fetchMovieDetails(movieId) {
+  const response = await axios.get(`movie/${movieId}?api_key=${KEY}`);
+  return response.data;
+}

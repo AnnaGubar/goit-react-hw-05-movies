@@ -1,0 +1,12 @@
+.btn{
+  background-color: transparent;
+  border-color: transparent;
+  margin-bottom: 10px;
+  transition: all 250ms ease-out;
+}
+
+.btn:hover{
+  color: #f3188d;
+  background-color: #f0a2cb26;
+  border-radius: 10px;
+}
