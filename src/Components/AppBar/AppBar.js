@@ -1,11 +1,16 @@
-import Navigation from '../Navigation/Navigation';
+import Navigation from '../Navigation';
+import { Outlet } from 'react-router-dom';
+import s from './AppBar.module.css';
 
-const AppBar = () => {
+function AppBar() {
   return (
-    <div>
-      <Navigation />
-    </div>
+    <>
+      <header className={s.header}>
+        <Navigation />
+      </header>
+      <Outlet />
+    </>
   );
-};
+}
 
 export default AppBar;

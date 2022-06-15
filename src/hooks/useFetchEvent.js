@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import * as eventsAPI from 'services/eventsApi';
+import * as eventsAPI from 'services/moviesApi';
 
  const useFetchEvent = () => {
   const params = useParams();

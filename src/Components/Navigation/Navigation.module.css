@@ -1,11 +1,17 @@
 .link{
-  padding: 10px;
-  font-size: 20px;
-  color: black;
+  display: inline-block;
   text-decoration: none;
+  padding: 12px 0px;
+  font-weight: 500;
+  color: #2a363b;
+  font-size: 18px;
 }
 
-.active-link{
+.link:last-child{
+  margin-left: 10px;
+}
+
+.activeLink{
   composes:link;
-  color: red;
+  color: #f3188d;
 }

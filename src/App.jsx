@@ -1,22 +1,37 @@
+import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Layout from './Components/Layout/Layout';
-import HomeView from './Views/HomeView/HomeView';
-import EventsView from './Views/EventsView/EventsView';
-import EventSubView from './Views/EventSubView/EventSubView';
-// import EventDetailsSubView from './Views/EventDetailsSubView/EventDetailsSubView';
+import AppBar from './Components/AppBar';
 
-export function App() {
+const HomePage = lazy(() =>
+  import('./Views/HomePage' /* webpackChunkName: "HomePage" */)
+);
+const MoviesPage = lazy(() =>
+  import('./Views/MoviesPage' /* webpackChunkName: "MoviesPage" */)
+);
+const MovieDetailsPage = lazy(() =>
+  import('./Views/MovieDetailsPage' /* webpackChunkName: "MovieDetailsPage" */)
+);
+const Cast = lazy(() => import('./Views/Cast' /* webpackChunkName: "Cast" */));
+const Reviews = lazy(() =>
+  import('./Views/Reviews' /* webpackChunkName: "Reviews" */)
+);
+
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomeView />} />
-        <Route path="events" element={<EventsView />}>
-          <Route path=":eventId" element={<EventSubView />}/>
-        </Route>
-        {/* <Route path="events/:eventId/details" element={<EventDetailsSubView />}/> */}
-        {/* <Route path="*" element={<NotFoundView />}/> */}
-      </Route>
-    </Routes>
+    <>
+      <AppBar />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/movies" element={<MoviesPage />} />
+          <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </>
   );
 }
 
+export default App;
