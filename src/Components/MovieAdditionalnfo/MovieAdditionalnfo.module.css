@@ -28,12 +28,6 @@
 }
 
 .lines{
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* min-height: 50px; */
-  /* margin-bottom: 16px; */
-  /* width: 100%; */
   border-bottom: 2px solid rgba(91, 102, 107, 0.431);
   box-shadow: 0px 0px 3px 0px rgba(74, 74, 75, 0.786);
 }

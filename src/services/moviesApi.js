@@ -17,3 +17,13 @@ export async function fetchMovieCast(movieId) {
   const response = await axios.get(`movie/${movieId}/credits?api_key=${KEY}`);
   return response.data;
 }
+
+export async function fetchMovieReviews(movieId) {
+  const response = await axios.get(`movie/${movieId}/reviews?api_key=${KEY}`);
+  return response.data;
+}
+
+export async function fetchSearchValue(searchValue) {
+  const response = await axios.get(`search/movie?api_key=${KEY}&query=${searchValue}&page=1`);
+  return response.data;
+}

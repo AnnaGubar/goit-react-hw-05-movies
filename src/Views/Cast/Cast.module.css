@@ -1,0 +1,15 @@
+.list{
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list>li{
+  width: calc((100% - (2 * 30px)) /3);
+}
+
+.avatar{
+  height: 200px;
+  width: 150px;
+}
