@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchMovieCast } from '../../services/moviesApi';
 import Container from '../../Components/Container';
 import defaultAvatar from '../../images/no-avatar.png';
+
 import s from './Cast.module.css';
 
 function Cast() {
