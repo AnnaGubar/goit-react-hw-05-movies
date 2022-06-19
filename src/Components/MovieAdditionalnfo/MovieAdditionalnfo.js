@@ -7,6 +7,7 @@ function MovieAdditionalnfo() {
     <div className={s.lines}>
       <Container>
       <h2 className={s.title}>Additional information</h2>
+
       <ul className={s.list}>
         <li>
           <NavLink to="cast"
@@ -16,7 +17,8 @@ function MovieAdditionalnfo() {
           <NavLink to="reviews"
           className={({ isActive }) => (isActive ? s['activeLink'] : s['link'])}>Reviews</NavLink>
         </li>
-      </ul></Container>
+      </ul>
+      </Container>
     </div>
   );
 }

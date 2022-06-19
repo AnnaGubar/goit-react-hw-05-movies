@@ -1,0 +1,1 @@
+`<NavLink to="/" className={({ isActive }) => (isActive ? ['activeLink'] : s['link'])}>`

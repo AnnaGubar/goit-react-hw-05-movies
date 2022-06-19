@@ -9,7 +9,7 @@ function HomePage() {
 
   useEffect(() => {
     fetchTrendingMovies().then(({ results }) => {
-      console.log(results);
+      // console.log(results);
       setMoviesList(results);
     });
   }, []);

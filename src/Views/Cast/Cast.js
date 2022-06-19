@@ -21,6 +21,7 @@ function Cast() {
           };
         }
       );
+      
       setCastList(dataCast);
     });
   }, [movieId]);

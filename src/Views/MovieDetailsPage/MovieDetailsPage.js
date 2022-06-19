@@ -9,12 +9,15 @@ import s from './MovieDetailsPage.module.css';
 function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
   const [prevLocation, setPrevLocation] = useState();
+
   const { movieId } = useParams();
 
-  const navigate = useNavigate(); // откуда пришли
+  //* откуда пришли
+  const navigate = useNavigate(); 
   // console.log("~ navigate", navigate)
 
-  const location = useLocation(); // где находимся
+  //* где находимся
+  const location = useLocation(); 
   // console.log('~ location', location); // pathname: '/movies/507086'
   // console.log('5555', location.state); // pathname: '/'
 
@@ -25,14 +28,18 @@ function MovieDetailsPage() {
     });
   }, [movieId]);
 
-  // useEffect(() => {
-  //   const { state } = location;
-  //   if (!state) {
-  //     return;
-  //   }
+  useEffect(() => {
+    const { state } = location;
+    if (!state) {
+      return;
+    }
 
-  //   setPrevLocation(`${state.pathname}${state.search}`)
-  // }, [location]);
+    console.log(state)
+    // {pathname: '/movies', search: '?query=word',...} - 'word' введенное значение в поисковик
+
+    setPrevLocation(`${state.pathname}${state.search}`);
+    //                 откуда пришли    что вводили
+  }, [location]);
 
   function goToPrevPage() {
     navigate(prevLocation ? prevLocation : '/');
@@ -46,6 +53,7 @@ function MovieDetailsPage() {
         </button>
         {movie && <MovieDescription movie={movie} />}
       </Container>
+      
       <MovieAdditionalnfo />
       <Outlet />
     </>

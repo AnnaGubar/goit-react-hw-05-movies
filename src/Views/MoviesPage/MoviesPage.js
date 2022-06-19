@@ -10,8 +10,15 @@ function MoviesPage() {
   const [moviesList, setMoviesList] = useState([]);
 
   useEffect(() => {
-    if (searchValue) {
-      fetchSearchValue(searchValue).then(({ results }) => {
+    //получаем через метод has пара-тр с адресной строки
+    const searchParamsQuery = searchParams.get('query');
+
+    if (!searchParamsQuery) {
+      return;
+    }
+
+    if (searchParams) {
+      fetchSearchValue(searchParamsQuery).then(({ results }) => {
         if (results.length === 0) {
           alert("We didn't find anything, try again.");
           return;
@@ -20,22 +27,26 @@ function MoviesPage() {
         setMoviesList(results);
       });
     }
-  }, [searchValue]);
+  }, [searchParams]);
 
   function getSearchValue(e) {
     e.preventDefault();
     let inputValue = e.currentTarget.children.searchValue;
+    // console.log("⭐ ~ inputValue", inputValue.value)
 
     if (!inputValue.value) {
       alert('Enter something to start searching');
       return;
     }
-    setSearchParams({ query: inputValue });
+
+    // записываем введенный запрос в адр.строку
+    setSearchParams({ query: inputValue.value.toLowerCase() });
+
     setSearchValue(inputValue.value.toLowerCase());
     inputValue.value = '';
   }
 
-  console.log(moviesList);
+  // console.log(moviesList);
 
   return (
     <Container>
