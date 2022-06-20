@@ -3,17 +3,17 @@ import { Route, Routes } from 'react-router-dom';
 import AppBar from './Components/AppBar';
 
 const HomePage = lazy(() =>
-  import('./Views/HomePage' /* webpackChunkName: "HomePage" */)
+  import('./Views/HomePage')
 );
 const MoviesPage = lazy(() =>
-  import('./Views/MoviesPage' /* webpackChunkName: "MoviesPage" */)
+  import('./Views/MoviesPage')
 );
 const MovieDetailsPage = lazy(() =>
-  import('./Views/MovieDetailsPage' /* webpackChunkName: "MovieDetailsPage" */)
+  import('./Views/MovieDetailsPage')
 );
-const Cast = lazy(() => import('./Views/Cast' /* webpackChunkName: "Cast" */));
+const Cast = lazy(() => import('./Views/Cast'));
 const Reviews = lazy(() =>
-  import('./Views/Reviews' /* webpackChunkName: "Reviews" */)
+  import('./Views/Reviews')
 );
 
 function App() {
